@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="game.GameRulesTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2015-06-30T17:44:52" hostname="Yams" time="0.063">
+  <properties/>
+  <testcase name="gridWithHorizontalAliveCellsResultsVerticalLiveCells" classname="game.GameRulesTest" time="0.009"/>
+  <testcase name="bottomRightCornerCanHaveAtMostThreeLiveNeighbour" classname="game.GameRulesTest" time="0.0"/>
+  <testcase name="deadCellWithFourLiveNeighbourDies" classname="game.GameRulesTest" time="0.0"/>
+  <testcase name="topLeftCornerCanHaveAtMostThreeLiveNeighbour" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="gridWithVerticalAliveCellsResultsHorizontalLiveCells" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="deadCellWithTwoLiveNeighbourDies" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="deadCellWithZeroLiveNeighbourDies" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="oneLiveCellGridHaveOneNeighborForAdjacentCells" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="twoLiveCellGridHaveTwoNeighborForAdjacentCells" classname="game.GameRulesTest" time="0.0"/>
+  <testcase name="gridWithOneAliveCellsResultsAllDeadCells" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="liveCellWithZeroNeigbhborsDies" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="liveCellWithMoreThanThreeNeighborDies" classname="game.GameRulesTest" time="0.0"/>
+  <testcase name="bottomLeftCornerCanHaveAtMostThreeLiveNeighbour" classname="game.GameRulesTest" time="0.0"/>
+  <testcase name="liveCellWithThreeNeighbourAlives" classname="game.GameRulesTest" time="0.017"/>
+  <testcase name="liveCellWithTwoNeighborAlives" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="oneLiveCellCanHaveZeroLiveNeighbours" classname="game.GameRulesTest" time="0.0"/>
+  <testcase name="topRightCornerCanHaveAtMostThreeLiveNeighbour" classname="game.GameRulesTest" time="0.0"/>
+  <testcase name="deadCellWithOneLiveNeighbourDies" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="gridWithAllDeadCellsResultsAllDeadCells" classname="game.GameRulesTest" time="0.002"/>
+  <testcase name="deadCellWithThreeLiveNeighbourLives" classname="game.GameRulesTest" time="0.0"/>
+  <testcase name="emptyGridHaveZeroLiveNeighbour" classname="game.GameRulesTest" time="0.001"/>
+  <testcase name="liveCellWithOneNeighbourDies" classname="game.GameRulesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

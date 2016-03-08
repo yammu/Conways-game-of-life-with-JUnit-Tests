@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>GameRules.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assign1</a> &gt; <a href="index.source.html" class="el_package">game</a> &gt; <span class="el_source">GameRules.java</span></div><h1>GameRules.java</h1><pre class="source lang-java linenums">package game;
+
+<span class="nc" id="L3">public class GameRules {</span>
+
+<span class="fc" id="L5">  static boolean ALIVE = true;</span>
+
+  public static boolean isAlive(boolean currentState, int numberOfLiveNeighbors) {
+<span class="fc bfc" id="L8" title="All 6 branches covered.">    return numberOfLiveNeighbors == 3 || currentState == ALIVE &amp;&amp; numberOfLiveNeighbors == 2;</span>
+  }
+
+  static boolean isInBounds(int i, int j, int length) {
+<span class="fc bfc" id="L12" title="All 8 branches covered.">    return i &gt;= 0 &amp;&amp; i &lt; length &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; length;</span>
+  }
+
+  public static int numberOfLiveNeighbors(boolean[][] grid, int x, int y) {
+<span class="fc" id="L16">    int numberOfLiveNeighbor = 0;</span>
+    
+<span class="fc bfc" id="L18" title="All 2 branches covered.">    for (int i = x - 1; i &lt;= x + 1; i++) {</span>
+
+<span class="fc bfc" id="L20" title="All 2 branches covered.">      for (int j = y - 1; j &lt;= y + 1; j++) {</span>
+
+<span class="fc bfc" id="L22" title="All 4 branches covered.">        if (isInBounds(i, j, grid.length) &amp;&amp; grid[i][j] == ALIVE)</span>
+<span class="fc" id="L23">          numberOfLiveNeighbor++;</span>
+
+      }
+    }
+    
+<span class="fc bfc" id="L28" title="All 2 branches covered.">    if (grid[x][y] == ALIVE)</span>
+<span class="fc" id="L29">      numberOfLiveNeighbor = numberOfLiveNeighbor - 1;</span>
+
+<span class="fc" id="L31">    return numberOfLiveNeighbor;</span>
+  }
+
+  public static boolean[][] nextGeneration(boolean[][] inputGrid) {
+<span class="fc" id="L35">    boolean resultGrid[][] = new boolean[inputGrid.length][inputGrid.length];</span>
+    
+<span class="fc bfc" id="L37" title="All 2 branches covered.">    for (int i1 = 0; i1 &lt; inputGrid.length; i1++) {</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">      for (int j = 0; j &lt; inputGrid.length; j++) {</span>
+<span class="fc" id="L39">        int numberOfLiveNeighbors = numberOfLiveNeighbors(inputGrid, i1, j);</span>
+<span class="fc" id="L40">        resultGrid[i1][j] = isAlive(inputGrid[i1][j], numberOfLiveNeighbors);</span>
+      }
+    }
+    
+<span class="fc" id="L44">    return resultGrid;</span>
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>
